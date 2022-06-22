@@ -1,0 +1,45 @@
+name: ExamplePlugin
+main: net.evmodder.example.ExamplePlugin
+author: EvModder
+website: https://github.com/EvModder/Example-Plugin
+description: A simple example plugin for devs to reference.
+version: 1.0
+api-version: 1.13
+
+commands:
+  ping:
+    description: View ping for yourself or another player
+    usage: /ping [player]
+    permission: example.ping
+
+  yourmother:
+    description: Does your mom
+    usage: /urmom <player> [count]
+    aliases: [yourmom,urmom]
+    permission: example.yourmother
+    permission-message: Msg sent when u no has perm; normally I don't put this field cuz default perm error msg is fine
+
+permissions:
+  example.yourmother:
+    description: Access to /urmom
+    default: true
+
+  example.yourmother.*:
+    description: Full access to /urmom subcommands
+    children:
+      example.yourmother.self: true
+      example.yourmother.others: true
+      example.yourmother.multiple: true
+    default: op
+
+  example.yourmother.self:
+    description: Access to /urmom <your own name>
+    default: true
+
+  example.yourmother.others:
+    description: Access to /urmom <other player>
+    default: false
+
+  example.yourmother.multiple:
+    description: Access to /urmom <player> [count]
+    default: false
