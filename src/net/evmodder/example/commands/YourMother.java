@@ -9,12 +9,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.bukkit.ChatColor;
-import net.evmodder.example.SelfRegisteringCommand;
 
-public class CommandYourMother extends SelfRegisteringCommand{
+public class YourMother extends SelfRegisteringCommand{
 	private final JavaPlugin pl;
 
-	public CommandYourMother(JavaPlugin pl){
+	public YourMother(JavaPlugin pl){
 		super(pl);
 		this.pl = pl;
 	}

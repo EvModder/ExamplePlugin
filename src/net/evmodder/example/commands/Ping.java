@@ -7,12 +7,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.google.common.collect.ImmutableList;
 import java.util.List;
 import org.bukkit.ChatColor;
-import net.evmodder.example.SelfRegisteringCommand;
 
-public class CommandPing extends SelfRegisteringCommand{
+public class Ping extends SelfRegisteringCommand{
 	private final JavaPlugin pl;
 
-	public CommandPing(JavaPlugin pl){
+	public Ping(JavaPlugin pl){
 		super(pl);
 		this.pl = pl;
 	}

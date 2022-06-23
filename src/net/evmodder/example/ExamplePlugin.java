@@ -47,8 +47,8 @@ public class ExamplePlugin extends JavaPlugin{
 		getServer().getPluginManager().registerEvents(new RageQuitListener(rageQuitMsg), this);
 
 		// I personally like doing commands this way
-		new CommandPing(this);
-		new CommandYourMother(this);
+		new Ping(this);
+		new YourMother(this);
 	}
 
 	@Override public final void onDisable(){

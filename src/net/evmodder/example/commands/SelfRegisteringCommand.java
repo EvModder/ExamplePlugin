@@ -1,4 +1,4 @@
-package net.evmodder.example;
+package net.evmodder.example.commands;
 
 import java.util.List;
 import org.bukkit.command.Command;
@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public abstract class SelfRegisteringCommand implements TabExecutor{
 
 	public SelfRegisteringCommand(JavaPlugin pl){
-		final String name = getClass().getSimpleName().substring(7).toLowerCase();// "CommandPing" -> "Ping"
+		final String name = getClass().getSimpleName().toLowerCase(); // Assumes the [Command].java file has the same name as in plugin.yml
 		final PluginCommand command = pl.getCommand(name);
 		command.setExecutor(this);
 		command.setTabCompleter(this);
